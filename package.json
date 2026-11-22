@@ -1,0 +1,13 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node --env-file-if-exists=.env src/build.js",
+    "dev": "node --env-file-if-exists=.env src/serve.js"
+  },
+  "dependencies": {
+    "marked": "18.2.1"
+  }
+}
