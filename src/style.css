@@ -88,6 +88,10 @@ main { min-height: 60vh; padding-bottom: 80px; }
 .card-link:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
 .card-desc { margin: 0; font-size: 15px; color: var(--muted); }
 
+.hero { margin: 32px auto 0; }
+.hero img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: center 45%; }
+@media (max-width: 640px) { .hero img { aspect-ratio: 4 / 3; } }
+.hero + .empty { padding-top: 48px; }
 .empty { padding-top: 96px; display: grid; gap: 12px; }
 .empty h1 { font-size: clamp(32px, 5vw, 48px); }
 .empty p { color: var(--muted); margin: 0; }

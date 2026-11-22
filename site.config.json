@@ -1,5 +1,7 @@
 {
-  "title": "블로그 이름",
+  "title": "나의 여행",
+  "image": "/images/my-trip.jpg",
+  "imageAlt": "노을 지는 바다 위에 떠 있는 작은 배",
   "description": "평범한 하루를 조금씩 기록하는 일상 블로그입니다.",
   "lang": "ko",
   "siteUrl": "http://localhost:4000",

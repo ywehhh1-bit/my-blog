@@ -72,7 +72,7 @@ function layout(site, { title, description, body, path = '/', image }) {
 <meta property="og:description" content="${desc}">
 <meta property="og:type" content="${path.startsWith('/posts/') ? 'article' : 'website'}">
 <meta property="og:url" content="${esc(canonical)}">
-${image ? `<meta property="og:image" content="${esc(site.siteUrl + image)}">` : ''}
+${(image || site.image) ? `<meta property="og:image" content="${esc(site.siteUrl + (image || site.image))}">` : ''}
 <link rel="alternate" type="application/rss+xml" title="${esc(site.title)}" href="${u(site, '/feed.xml')}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="${u(site, '/style.css')}">
@@ -132,6 +132,9 @@ function card(site, p) {
 }
 
 export function home(site, posts) {
+  const hero = site.image
+    ? `<figure class="container hero"><img src="${u(site, site.image)}" alt="${esc(site.imageAlt || '')}"></figure>`
+    : '';
   let body;
   if (!posts.length) {
     body = `<section class="container empty"><h1>${esc(site.title)}</h1><p>아직 올라온 글이 없어요. 첫 글을 준비하고 있습니다.</p></section>`;
@@ -156,7 +159,7 @@ ${rest.length ? `<section class="container">
   <div class="grid">${rest.map((p) => card(site, p)).join('')}</div>
 </section>` : ''}`;
   }
-  return layout(site, { body, path: '/' });
+  return layout(site, { body: hero + body, path: '/' });
 }
 
 export function post(site, p, posts) {
