@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4E6D4"/>
+      <stop offset="1" stop-color="#EBD5BC"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BFD9E6"/>
+      <stop offset="1" stop-color="#E7F0EC"/>
+    </linearGradient>
+    <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B07A4F"/>
+      <stop offset="1" stop-color="#8E5C38"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.8">
+      <stop offset="0" stop-color="#FFE7A8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFE7A8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 벽 -->
+  <rect width="1200" height="800" fill="url(#wall)"/>
+
+  <!-- 창문 -->
+  <rect x="150" y="90" width="420" height="380" rx="14" fill="#7A5236"/>
+  <rect x="168" y="108" width="384" height="344" rx="6" fill="url(#sky)"/>
+  <clipPath id="glass"><rect x="168" y="108" width="384" height="344" rx="6"/></clipPath>
+  <g clip-path="url(#glass)">
+    <ellipse cx="290" cy="420" rx="180" ry="90" fill="#A9CBB0"/>
+    <ellipse cx="470" cy="440" rx="170" ry="80" fill="#94BC9E"/>
+    <circle cx="470" cy="180" r="34" fill="#FFF4D6" opacity="0.9"/>
+  </g>
+  <rect x="354" y="108" width="12" height="344" fill="#7A5236"/>
+  <rect x="168" y="274" width="384" height="12" fill="#7A5236"/>
+  <rect x="140" y="462" width="440" height="18" rx="4" fill="#6A452C"/>
+
+  <!-- 선반 -->
+  <rect x="700" y="230" width="380" height="14" rx="4" fill="#7A5236"/>
+  <rect x="730" y="150" width="56" height="80" rx="8" fill="#D9C2A6"/>
+  <rect x="738" y="138" width="40" height="16" rx="5" fill="#7A5236"/>
+  <rect x="800" y="168" width="50" height="62" rx="8" fill="#C9A98A"/>
+  <rect x="806" y="158" width="38" height="14" rx="5" fill="#6A452C"/>
+  <!-- 선반 화분 -->
+  <path d="M948 230 L940 186 H1000 L992 230 Z" fill="#C8735A"/>
+  <path d="M970 186 C960 150 930 140 918 150 C934 156 950 168 966 186 Z" fill="#6E9C74"/>
+  <path d="M970 186 C976 146 1006 128 1022 136 C1004 146 988 162 976 186 Z" fill="#5E8C66"/>
+  <path d="M970 186 C968 140 972 120 980 108 C984 130 980 160 974 186 Z" fill="#7FAE84"/>
+  <!-- 액자 -->
+  <rect x="790" y="300" width="200" height="150" rx="6" fill="#FBF5EC" stroke="#7A5236" stroke-width="10"/>
+  <path d="M820 420 L870 360 L905 400 L930 375 L965 420 Z" fill="#D8B08A"/>
+  <circle cx="935" cy="340" r="14" fill="#E9A86B"/>
+
+  <!-- 펜던트 조명 -->
+  <line x1="640" y1="0" x2="640" y2="110" stroke="#4B3324" stroke-width="4"/>
+  <path d="M600 150 Q640 96 680 150 Z" fill="#3E5C4E"/>
+  <ellipse cx="640" cy="150" rx="40" ry="7" fill="#2F4A3D"/>
+  <circle cx="640" cy="156" r="10" fill="#FFE7A8"/>
+  <ellipse cx="640" cy="330" rx="260" ry="230" fill="url(#glow)" opacity="0.55"/>
+
+  <!-- 테이블 -->
+  <rect x="0" y="560" width="1200" height="240" fill="url(#table)"/>
+  <rect x="0" y="556" width="1200" height="10" fill="#C48D5E"/>
+  <path d="M0 640 H1200 M0 720 H1200" stroke="#7E5132" stroke-width="2" opacity="0.35"/>
+
+  <!-- 접시 + 크루아상 -->
+  <ellipse cx="820" cy="640" rx="150" ry="38" fill="#E5DCCF"/>
+  <ellipse cx="820" cy="632" rx="150" ry="38" fill="#FBF8F3"/>
+  <ellipse cx="820" cy="632" rx="112" ry="26" fill="#F1EBE2"/>
+  <path d="M730 624 C750 580 890 580 910 624 C880 640 760 640 730 624 Z" fill="#D9963F"/>
+  <path d="M760 616 C780 590 800 588 812 616 M812 616 C820 586 842 586 852 616 M852 616 C866 592 884 596 892 620" fill="none" stroke="#B5742A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M742 620 C770 600 870 600 898 620" fill="none" stroke="#F0B865" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- 컵받침 + 커피잔 -->
+  <ellipse cx="480" cy="652" rx="140" ry="34" fill="#D7CDBF"/>
+  <ellipse cx="480" cy="644" rx="140" ry="34" fill="#F6F1EA"/>
+  <path d="M390 520 H570 L556 620 C552 640 530 652 480 652 C430 652 408 640 404 620 Z" fill="#FFFFFF"/>
+  <path d="M570 548 C626 548 628 612 562 612" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
+  <path d="M570 548 C626 548 628 612 562 612" fill="none" stroke="#EDE5DA" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="480" cy="520" rx="90" ry="20" fill="#F0E8DD"/>
+  <ellipse cx="480" cy="522" rx="80" ry="15" fill="#7A4A2A"/>
+  <!-- 라떼 아트 하트 -->
+  <path d="M480 532 C462 520 458 510 470 508 C476 507 480 512 480 515 C480 512 484 507 490 508 C502 510 498 520 480 532 Z" fill="#F3E3CC"/>
+  <!-- 김 -->
+  <path d="M450 480 C430 450 470 430 450 395" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  <path d="M490 470 C470 440 510 420 490 380" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+  <path d="M525 482 C508 458 540 440 524 410" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- 작은 책 -->
+  <g transform="rotate(-8 230 680)">
+    <rect x="120" y="640" width="220" height="70" rx="6" fill="#4F6D5E"/>
+    <rect x="120" y="640" width="220" height="14" rx="4" fill="#FBF5EC"/>
+    <rect x="300" y="654" width="14" height="56" fill="#E9A86B"/>
+  </g>
+</svg>
