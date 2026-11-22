@@ -1,6 +1,6 @@
 {
   "title": "블로그 이름",
-  "description": "강릉의 맛과 장소를 직접 조사해 기록합니다.",
+  "description": "평범한 하루를 조금씩 기록하는 일상 블로그입니다.",
   "lang": "ko",
   "siteUrl": "http://localhost:4000",
   "airtable": {
